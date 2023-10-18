@@ -1,6 +1,9 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+
+  --max-height-transition: max-height 0.5s ease-in-out;
+  --opacity-transition: opacity 0.5s ease-in-out;
 }
 
 *,
@@ -12,12 +15,14 @@ html {
 html,
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  min-width: 320px;
+  min-width: 360px;
 }
 
 #root {
@@ -44,5 +49,71 @@ main {
   overflow: hidden;
 }
 
+.theme-button {
+  position: fixed;
+  top: 20px;
+  left: 16px;
+  z-index: 20;
+}
 
+.site-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
 
+.inner-wrapper {
+  display: flex;
+
+  width: 100%;
+}
+
+.filter-wrapper {
+  min-width: 350px;
+  min-height: 100vh;
+  margin-right: 20px;
+}
+
+.developer-filter {
+  position: fixed;
+  top: 70px;
+  left: 16px;
+  z-index: 10;
+
+  width: 340px;
+  max-height: 320px;
+
+  overflow: hidden;
+  transition: var(--max-height-transition);
+}
+
+.developer-filter.visible {
+  max-height: 600px;
+  transition: var(--max-height-transition);
+}
+
+.extra-actions {
+  margin-top: 20px;
+
+  opacity: 0;
+  transition: var(--opacity-transition);
+}
+
+.extra-actions.visible {
+  opacity: 1;
+  transition: var(--opacity-transition);
+}
+
+.skill-filter-title,
+.grade-filter-title {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.clear-filters-btn {
+  margin-top: 25px;
+}
+
+.developer-list-wrapper {
+  max-width: 400px;
+  padding-top: 70px;
+}
