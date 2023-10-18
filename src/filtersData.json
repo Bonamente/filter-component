@@ -1,0 +1,25 @@
+{
+  "skills": [
+    "Frontend",
+    "JavaScript",
+    "NextJS",
+    "React",
+    "AntD",
+    "Backend",
+    "NodeJS",
+    "PostgreSQL",
+    "Python",
+    "Rust",
+    "GO",
+    "Design",
+    "Figma",
+    "Plasmic",
+    "ML",
+    "CV",
+    "opencv",
+    "DevOps",
+    "k3s",
+    "werf"
+  ],
+  "grades": ["junior", "middle", "senior", "lead"]
+}
